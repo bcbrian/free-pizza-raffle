@@ -1,5 +1,5 @@
 <style>
-  div {
+  .container {
     background-color: rebeccapurple;
     color: white;
     padding: 20px;
@@ -25,14 +25,138 @@
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+
+  .pizza {
+    position: relative;
+    background: #836034;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    border: 42px solid #5c3e19;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .pizza-slice-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pizza-slice {
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-top: 250px solid darkorange;
+  }
+
+  .pepperoni {
+    background-color: darkred;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .pepperoni-1 {
+    top: 45px;
+    left: 35px;
+  }
+
+  .pepperoni-2 {
+    top: 120px;
+    left: 75px;
+  }
+
+  .slice-2 {
+    transform: translateX(-50%) rotate(180deg);
+    transform-origin: bottom;
+  }
+  .slice-3 {
+    transform: translateX(-50%) rotate(90deg);
+    transform-origin: bottom;
+  }
+  .slice-4 {
+    transform: translateX(-50%) rotate(270deg);
+    transform-origin: bottom;
+  }
+
+  .slice-5 {
+    transform: translateX(-50%) rotate(45deg);
+    transform-origin: bottom;
+  }
+  .slice-6 {
+    transform: translateX(-50%) rotate(135deg);
+    transform-origin: bottom;
+  }
+  .slice-7 {
+    transform: translateX(-50%) rotate(225deg);
+    transform-origin: bottom;
+  }
+  .slice-8 {
+    transform: translateX(-50%) rotate(315deg);
+    transform-origin: bottom;
+  }
 </style>
 
-<div>
+<div class="container">
   How many Slices
 </div>
-<div>
-  <input />
+<div class="container">
+  <input id="slices" />
 </div>
-<div>
-  <button>Serve My Pizza</button>
+<div class="container">
+  <button onclick="thetorminator()">Serve My Pizza</button>
 </div>
+
+<div class="pizza">
+  <div class="pizza-slice-container slice-1">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+  <div class="pizza-slice-container slice-2">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+  <div class="pizza-slice-container slice-3">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+  <div class="pizza-slice-container slice-4">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+  <div class="pizza-slice-container slice-5">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+  <div class="pizza-slice-container slice-6">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+  <div class="pizza-slice-container slice-7">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+  <div class="pizza-slice-container slice-8">
+    <div class="pizza-slice"></div>
+    <div class="pepperoni pepperoni-1"></div>
+    <div class="pepperoni pepperoni-2"></div>
+  </div>
+</div>
+
+<script>
+  function thetorminator() {
+    const inputEl = document.getElementById("slices");
+
+    alert(inputEl.value);
+  }
+</script>
